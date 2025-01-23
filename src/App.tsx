@@ -89,7 +89,7 @@ const App = () => {
     try {
       setIsLoading(true);
       const res = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${query}`
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${query}`
       );
       if (res.status === 200) {
         setData(res.data);
