@@ -49,3 +49,4 @@ export default tseslint.config({
 })
 ```
 # good-weather-app
+# general-chat-app
