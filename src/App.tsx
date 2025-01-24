@@ -53,10 +53,16 @@ const App = () => {
           </div>
         ))
         }
-        {loading&&(<div className="flex flex-col items-center justify-center gap-5">
+        {loading ? (<div className="flex flex-col items-center justify-center gap-5">
           <h1 className="text-2xl font-bold text-white animate-pulse">Generating Results</h1>
           <div className="bg-blue-600 rounded-full h-10 w-10 animate-bounce delay-5"/>
-        </div>)}
+        </div>) 
+        : 
+        (
+          <div className="border-2 border-slate-700 rounded-lg p-10">
+            <h1 className="text-lg font-semibold text-white">Write something to get started</h1>
+          </div>
+        )}
       </div>
       {loading && (<Skeleton className="w-[100px] h-[20px] rounded-full" />)}
       <div className="flex flex-row items-center justify-center gap-2 w-[70%] mb-10 fixed bottom-0">
