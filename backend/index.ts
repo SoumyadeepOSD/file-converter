@@ -59,7 +59,7 @@ app.post('/convert', upload.single('file'), (req:any, res:any) => {
                         console.log(`File ${outputPath} deleted successfully`);
                     }
                 });
-                //~The pdf file is deleted
+                //~The pdf file is deleted here
                 fs.unlink(outputPath, (unlinkErr:any)=>{
                     if(unlinkErr){
                         console.error(`Error deleting pdf file ${unlinkErr}`);
